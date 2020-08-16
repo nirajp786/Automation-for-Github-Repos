@@ -3,10 +3,8 @@
 python %GithubAutomation%
 echo This is a script that does nothing!
 echo %1
-echo %GithubUsername%
-echo %ProjectDrive%
 echo %ProjectLocation%
-%ProjectDrive%
 cd %ProjectLocation%
+::try something like cd N/ but have N/ as a env variable and see if that works
 dir
 pause

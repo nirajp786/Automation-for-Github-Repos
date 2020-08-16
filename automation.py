@@ -14,15 +14,17 @@ password = os.getenv("PASSWORD")
 
 
 def create():
-    print(path, username, password)
+    #print(path, username, password)
     projectName = sys.argv[1]
     try:
-        os.mkdir(path + projectName)
+        os.mkdir(path + "\\"  + projectName)
     except Exception as e:
         print("Cannot create repo {} since it already exists".format(projectName))
+        print(e)
         
-    user = Github(username, password)
+    user = Github(username, password).get_user()
     repo = user.create_repo(projectName)
+    print("Successfully created repo {} and it is on Github".format(projectName))
 
 if __name__  == "__main__":
     create()

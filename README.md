@@ -12,14 +12,14 @@ copy NUL authentication.env
 ## Windows - Users
 ```bat
 In the search bar at the bottom open up environment variables and add these environment variables to either User or System variables
+```
 | Variable Name  | Variable Value |
 | ------------- | ------------- |
 | GithubAutomation  | The absolute file path to automation.py  |
 | ProjectLocation  | The file location of where you want your repo to be stored  |
 | Github  | https://github.com/GithubUSERNAME/  |
-
+```bat
 You can change the Variable Name if you like but you will also have to configure the create.bat to match them
-
 Add the folder containing create.bat to the User or System PATH this way you can do create REPONAME from cmd to run the script
 ```
 

@@ -1,5 +1,10 @@
 # Automation-for-Github-Repos
 Custom Window command to create a new Github repo online as well as create a local repo on your pc with a README.md file
+Run the following after all the steps below to run the program
+```cmd
+create RepoName
+```
+If the your RepoName contains space please use - instead of spaces
 
 ## Install
 ```bat

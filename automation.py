@@ -11,6 +11,7 @@ load_dotenv(dotenv_path=envPath, override=True)
 path = os.getenv("FILEPATH")
 username = os.getenv("USERNAME")
 password = os.getenv("PASSWORD")
+token = os.getenv("TOKEN")
 
 
 def create():
@@ -22,7 +23,8 @@ def create():
         print("Cannot create repo {} since it already exists".format(projectName))
         print(e)
         
-    user = Github(username, password).get_user()
+    #Use user = Github(token).get_user() since using username and password for Github API will be deprecated by SEPT 2020
+    user = Github(token).get_user()
     repo = user.create_repo(projectName)
     print("Successfully created repo {} and it is on Github".format(projectName))
 

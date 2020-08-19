@@ -2,7 +2,7 @@
 
 python %GithubAutomation% %1
 cd %ProjectLocation% & cd %1
-echo #%1 >> README.md
+echo # %1 >> README.md
 git init
 git add README.md
 git commit -m "First commit"
